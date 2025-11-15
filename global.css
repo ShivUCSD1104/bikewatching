@@ -8,3 +8,8 @@ body {
   margin: auto;
   padding: 1em;
 }
+
+#map {
+  flex: 1;
+  min-height: 500px;
+}
