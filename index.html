@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' 'unsafe-eval' https://api.mapbox.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://api.mapbox.com; connect-src 'self' https://api.mapbox.com https://*.tiles.mapbox.com https://events.mapbox.com https://bostonopendata-boston.opendata.arcgis.com https://hub.arcgis.com https://raw.githubusercontent.com https://gbfs.bluebikes.com https://vis-society.github.io; img-src 'self' data: https://api.mapbox.com https://*.tiles.mapbox.com; worker-src 'self' blob:;"
+      content="default-src 'self'; script-src 'self' 'unsafe-eval' https://api.mapbox.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://api.mapbox.com; connect-src 'self' https://api.mapbox.com https://*.tiles.mapbox.com https://events.mapbox.com https://bostonopendata-boston.opendata.arcgis.com https://hub.arcgis.com https://raw.githubusercontent.com https://dsc106.com; img-src 'self' data: https://api.mapbox.com https://*.tiles.mapbox.com; worker-src 'self' blob:;"
     />
     <title>Bikewatching</title>
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
@@ -19,7 +19,27 @@
   </head>
   <body>
     <h1>🚴🏼‍♀️ Bikewatching</h1>
-    <div id="map"></div>
+    <div id="map">
+      <div class="controls">
+        <label
+          >Time of day:
+          <input
+            type="range"
+            id="time-slider"
+            min="0"
+            max="1440"
+            step="10"
+            value="-1"
+          />
+          <span id="time-label">All times</span>
+        </label>
+      </div>
+    </div>
+    <div class="legend">
+      <div style="--departure-ratio: 1">More departures</div>
+      <div style="--departure-ratio: 0.5">Balanced</div>
+      <div style="--departure-ratio: 0">More arrivals</div>
+    </div>
     <div id="tooltip"></div>
     <script type="module" src="map.js"></script>
   </body>
