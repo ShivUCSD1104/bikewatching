@@ -5,6 +5,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-eval' https://api.mapbox.com; style-src 'self' 'unsafe-inline' https://api.mapbox.com; connect-src 'self' https://api.mapbox.com https://*.tiles.mapbox.com https://bostonopendata-boston.opendata.arcgis.com https://raw.githubusercontent.com; img-src 'self' data: https://api.mapbox.com https://*.tiles.mapbox.com; worker-src 'self' blob:;"
+    />
     <title>Bikewatching</title>
     <script src="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.js"></script>
     <link
