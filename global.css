@@ -13,3 +13,19 @@ body {
   flex: 1;
   min-height: 500px;
 }
+
+#tooltip {
+  position: absolute;
+  background: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#tooltip.visible {
+  opacity: 1;
+}
